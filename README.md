@@ -1,4 +1,4 @@
-##USAGE
+## USAGE
 ### build the project 
 
 ### 启动本机的玩客币钱包
