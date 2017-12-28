@@ -1,8 +1,8 @@
 USAGE
-##build the project
+#build the project#
 
-##启动本机的玩客币钱包
-###./auto -h
+#启动本机的玩客币钱包#
+#./auto -h#
 ##./auto -dataDir=-dataDir=/Users/yourhome/Library/OTCWalletData
 
 
