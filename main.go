@@ -240,6 +240,9 @@ func convertToWeiHex(num int64) (b []byte, err error) {
 }
 
 func findMaxCombineV2(num int, limit int, mode string) (max int, result []int) {
+	if limit < num {
+		return
+	}
 	switch mode{
 	case "min":
 			times := int(limit / num)
