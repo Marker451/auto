@@ -77,7 +77,6 @@ func fixMonkeyID(id *string) {
 }
 
 func FeedMonkeys(w http.ResponseWriter, req *http.Request) {
-	fmt.Println("fffffffff")
 	body, err := ioutil.ReadAll(req.Body)
 	if err != nil {
 		fmt.Println(err)
