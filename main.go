@@ -226,7 +226,7 @@ func sendTranscation(from string, to string, value string, pwd string) (err erro
 // 如需转换 1  则需传入 MULTIPLE
 // num= MULTIPLE (1WKC) -> MULTIPLE000000000000WEI -> 0xde0b6b3a7640000
 func convertToWeiHex(num int64) (b []byte, err error) {
-	x := big.NewInt(MULTIPLE) //10^12
+	x := big.NewInt(1000000000000) //10^12
 	y := big.NewInt(num)
 	x.Mul(x, y)
 	result := math.HexOrDecimal256(*x)
@@ -240,6 +240,7 @@ func convertToWeiHex(num int64) (b []byte, err error) {
 }
 
 func findMaxCombineV2(num int, limit int, mode string) (max int, result []int) {
+	fmt.Println(num, limit)
 	if limit < num {
 		return
 	}
